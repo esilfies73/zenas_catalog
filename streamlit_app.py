@@ -39,8 +39,8 @@ if sweatsuit_list:
         st.write('The search value for ', color_chosen,' is ', color_chosen, '.')
         
         #st.subheader(color_chosen + ' Nutrition Information')
-        image_response = requests.get(f"{FILE_URL}")
-        st.image_response     
+  #      image_response = requests.get(f"{FILE_URL}")
+  #      st.image_response     
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
     #st.write(ingredients_string)
 
