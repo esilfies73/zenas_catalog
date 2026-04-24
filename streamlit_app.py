@@ -30,10 +30,10 @@ sweatsuit_list = st.selectbox(
 
 if sweatsuit_list:
    
-    ingredients_string = ''
+    sweatsuit_string = ''
 
-    for fruit_chosen in ingredients_list:
-        ingredients_string += fruit_chosen + ' '
+    for color_or_style in sweatsuit_list:
+        sweatsuit_string = color_or_style 
 
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
