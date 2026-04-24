@@ -23,7 +23,7 @@ pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 #st.stop()
 
-sweatsuit_list = st.select(
+sweatsuit_list = st.selectbox(
     'Pick a sweatsuit color or style:'
     , my_dataframe
 )
