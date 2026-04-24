@@ -35,14 +35,14 @@ sweatsuit_list = st.selectbox(
   #  for color_chosen in sweatsuit_list:
    #     sweatsuit_string += color_chosen 
 
- search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen, 'FILE_URL'].iloc[0]
- st.write('The search value for ', color_chosen,' is ', search_on, '.')
+search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen, 'FILE_URL'].iloc[0]
+st.write('The search value for ', color_chosen,' is ', search_on, '.')
         
- st.subheader('Our warm, comfortable, '+color_chosen + ' sweatsuit!')
- image_response = requests.get(f"{FILE_URL}")
- st.image(image=FILE_URL,width=400,caption=product_caption)
+st.subheader('Our warm, comfortable, '+color_chosen + ' sweatsuit!')
+image_response = requests.get(f"{FILE_URL}")
+st.image(image=FILE_URL,width=400,caption=product_caption)
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
- st.write(sweatsuit_string)
+st.write(sweatsuit_string)
 
     #my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
                     #values ('""" + ingredients_string + """','""" + name_on_order + """')"""
