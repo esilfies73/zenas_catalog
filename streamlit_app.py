@@ -39,8 +39,8 @@ if sweatsuit_list:
         st.write('The search value for ', color_chosen,' is ', search_on, '.')
         
         st.subheader('Our warm, comfortable, '+color_chosen + ' sweatsuit!')
-  #      image_response = requests.get(f"{FILE_URL}")
-  #      st.image_response     
+        image_response = requests.get(f"{FILE_URL}")
+        st.image(image=FILE_URL,width=400,caption=product_caption)
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
     st.write(sweatsuit_string)
 
