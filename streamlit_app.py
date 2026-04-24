@@ -32,8 +32,8 @@ if sweatsuit_list:
    
     sweatsuit_string = ''
 
-    for color_or_style in sweatsuit_list:
-        sweatsuit_string = COLOR_OR_STYLE 
+    for color_chosen in sweatsuit_list:
+        sweatsuit_string += color_chosen 
 
         search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen].iloc[0]
         st.write('The search value for ', color_chosen,' is ', color_chosen, '.')
