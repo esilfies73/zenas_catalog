@@ -38,7 +38,7 @@ if sweatsuit_list:
         search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen, 'FILE_URL'].iloc[0]
         st.write('The search value for ', color_chosen,' is ', search_on, '.')
         
-        #st.subheader(color_chosen + ' Nutrition Information')
+        st.subheader('Our warm, comfortable, '+color_chosen + ' sweatsuit!')
   #      image_response = requests.get(f"{FILE_URL}")
   #      st.image_response     
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
