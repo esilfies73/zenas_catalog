@@ -42,7 +42,7 @@ if sweatsuit_list:
   #      image_response = requests.get(f"{FILE_URL}")
   #      st.image_response     
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
-    #st.write(ingredients_string)
+    st.write(sweatsuit_string)
 
     #my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
                     #values ('""" + ingredients_string + """','""" + name_on_order + """')"""
