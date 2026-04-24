@@ -20,8 +20,8 @@ my_dataframe = session.table("zenas_athleisure_db.products.catalog_for_website")
 #st.stop()
 
 pd_df=my_dataframe.to_pandas()
-#st.dataframe(pd_df)
-#st.stop()
+st.dataframe(pd_df)
+st.stop()
 
 sweatsuit_list = st.selectbox(
     'Pick a sweatsuit color or style:'
