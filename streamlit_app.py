@@ -33,13 +33,13 @@ if sweatsuit_list:
     sweatsuit_string = ''
 
     for color_or_style in sweatsuit_list:
-        sweatsuit_string = color_or_style 
+        sweatsuit_string = COLOR_OR_STYLE 
 
-        search_on=pd_df.loc[pd_df['color_or_style'] == color_chosen].iloc[0]
+        search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen].iloc[0]
         st.write('The search value for ', color_chosen,' is ', color_chosen, '.')
         
         #st.subheader(color_chosen + ' Nutrition Information')
-        image_response = requests.get(f"{file_url}")
+        image_response = requests.get(f"{FILE_URL}")
         sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
     #st.write(ingredients_string)
 
