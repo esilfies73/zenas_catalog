@@ -40,7 +40,8 @@ if sweatsuit_list:
         
         #st.subheader(color_chosen + ' Nutrition Information')
         image_response = requests.get(f"{FILE_URL}")
-        sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
+        st.image_response     
+  #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
     #st.write(ingredients_string)
 
     #my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
