@@ -36,9 +36,9 @@ sweatsuit_list = st.selectbox(
    #     sweatsuit_string += color_chosen 
 
 #search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen, 'FILE_URL'].iloc[0]
-st.write('The search value for ', COLORE_OR_STYLE,' is ', FILE_URL, '.')
+st.write('The search value for ', COLOR_OR_STYLE,' is ', FILE_URL, '.')
         
-st.subheader('Our warm, comfortable, '+COLOR_OR_Style + ' sweatsuit!')
+st.subheader('Our warm, comfortable, '+COLOR_OR_STYLE + ' sweatsuit!')
 image_response = requests.get(f"{FILE_URL}")
 st.image(image=FILE_URL,width=400,caption=product_caption)
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
