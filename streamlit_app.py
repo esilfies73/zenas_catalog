@@ -35,21 +35,21 @@ if sweatsuit_list:
     for color_or_style in sweatsuit_list:
         sweatsuit_string = color_or_style 
 
-        search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
-        st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
+        search_on=pd_df.loc[pd_df['color_or_style'] == color_chosen].iloc[0]
+        st.write('The search value for ', color_chosen,' is ', color_chosen, '.')
         
-        st.subheader(fruit_chosen + ' Nutrition Information')
-        smoothiefroot_response = requests.get(f"https://my.smoothiefroot.com/api/fruit/{search_on}")
-        sf_df = st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
+        st.subheader(color_chosen + ' Nutrition Information')
+        image_response = requests.get(f"{file_url}")
+        sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
     #st.write(ingredients_string)
 
-    my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
-                    values ('""" + ingredients_string + """','""" + name_on_order + """')"""
+    #my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
+                    #values ('""" + ingredients_string + """','""" + name_on_order + """')"""
 
    # st.write(my_insert_stmt)
     #st.stop()
-    time_to_insert = st.button('Submit Order')
+   # time_to_insert = st.button('Submit Order')
 
-    if time_to_insert:
-        session.sql(my_insert_stmt).collect()
-        st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
+   # if time_to_insert:
+     #   session.sql(my_insert_stmt).collect()
+    #    st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
