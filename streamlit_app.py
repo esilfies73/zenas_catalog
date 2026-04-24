@@ -18,7 +18,8 @@ session = cnx.session()
 my_dataframe = session.table("zenas_athleisure_db.products.catalog_for_website").select(col('COLOR_OR_STYLE'),col('FILE_URL'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #st.stop()
-
+color='COLOR_OR_STYLE'
+url='FILE_URL'
 pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 #st.stop()
@@ -36,11 +37,11 @@ sweatsuit_list = st.selectbox(
    #     sweatsuit_string += color_chosen 
 
 #search_on=pd_df.loc[pd_df['COLOR_OR_STYLE'] == color_chosen, 'FILE_URL'].iloc[0]
-st.write('The search value for ', COLOR_OR_STYLE,' is ', FILE_URL, '.')
+st.write('The search value for ', color,' is ', url, '.')
         
-st.subheader('Our warm, comfortable, '+COLOR_OR_STYLE + ' sweatsuit!')
-image_response = requests.get(f"{FILE_URL}")
-st.image(image=FILE_URL,width=400,caption=product_caption)
+st.subheader('Our warm, comfortable, '+ color + ' sweatsuit!')
+image_response = requests.get(f"url")
+st.image(image=url,width=400,caption=product_caption)
   #      sf_df = st.dataframe(data=image_response.json(),use_container_width=True)
 #st.write(sweatsuit_string)
 
